@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Testing AMS Dev Enviornment]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extentReports.ExtentReportTestNG"/>
+  </listeners>
+  <test thread-count="5" name="RegressionSuite(failed)">
+    <classes>
+      <class name="tests.CRUDTests">
+        <methods>
+          <include name="deleteClonedItem"/>
+          <include name="deleteItem"/>
+          <include name="editNewItem"/>
+          <include name="addNewItem"/>
+          <include name="teardown"/>
+          <include name="checkIn"/>
+          <include name="checkOut"/>
+          <include name="cloneItem"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.CRUDTests -->
+      <class name="tests.LoginTestCases">
+        <methods>
+          <include name="Empty_Login_To_AMS"/>
+          <include name="Valid_Login_To_AMS"/>
+          <include name="UserName_EmptyPassword"/>
+          <include name="EmptyUserName_PasswordFill"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.LoginTestCases -->
+      <class name="tests.AccessGroupTests">
+        <methods>
+          <include name="editAccessGroup"/>
+          <include name="deleteAccessGroup"/>
+          <include name="teardown"/>
+          <include name="addAccessGroup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.AccessGroupTests -->
+      <class name="tests.LocationTests">
+        <methods>
+          <include name="deleteLocation"/>
+          <include name="editLocation"/>
+          <include name="addNewLocation"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.LocationTests -->
+    </classes>
+  </test> <!-- RegressionSuite(failed) -->
+</suite> <!-- Failed suite [Testing AMS Dev Enviornment] -->
